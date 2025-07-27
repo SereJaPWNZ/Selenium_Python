@@ -1,15 +1,17 @@
-from webdriver_manager.chrome import ChromeDriverManager
+import time
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
 from time import sleep
 
 
-service = Service(executable_path=ChromeDriverManager().install())
+service = Service(executable_path=r"C:\Users\Sergey\Documents\MyProjectSelenium\Selenium_Python\webdriver\yandexdriver.exe")
+
 options = Options()
-options.add_argument("--headless")
+options.binary_location = r"C:\Users\Sergey\AppData\Local\Yandex\YandexBrowser\Application\browser.exe"
+# options.add_argument("--headless")
 options.add_argument("--incognito")
-# options.add_argument("--start-maximized")
+
 try:
     driver = webdriver.Chrome(service=service, options=options)
     driver.get("https://hyperskill.org/tracks")
@@ -20,6 +22,5 @@ try:
     print(type(HEADER))
     print(type(BADGE))
     print(type(CARD))
-
 finally:
     driver.quit()
