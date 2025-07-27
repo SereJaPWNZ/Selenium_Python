@@ -25,7 +25,6 @@ try:
     print(links_texts)
 
     for text in links_texts:
-        print(text)
         # после каждого перехода на страницу со статусом возвращаемся
         # и снова находим ссылку с нужным текстом, кликаем
         driver.get(url)
