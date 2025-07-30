@@ -1,0 +1,23 @@
+{
+  "webdriver_path": "C:\\Users\\Sergey\\Documents\\MyProjectSelenium\\Selenium_Python\\webdriver\\yandexdriver.exe",
+  "browser_path": "C:\\Users\\Sergey\\AppData\\Local\\Yandex\\YandexBrowser\\Application\\browser.exe",
+  "base_url": "https://demoqa.com/alerts",
+  "explicit_wait": 10,
+  "screenshot_dir": "lesson_13/screenshots",
+  "window_size": [1920, 1080],
+  "headless": true,
+  "environments": {
+    "development": {
+      "base_url": "https://dev.demoqa.com/alerts",
+      "headless": false
+    },
+    "staging": {
+      "base_url": "https://staging.demoqa.com/alerts", 
+      "headless": true
+    },
+    "production": {
+      "base_url": "https://demoqa.com/alerts",
+      "headless": true
+    }
+  }
+}
